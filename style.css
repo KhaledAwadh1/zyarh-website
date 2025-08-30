@@ -1,0 +1,529 @@
+/* -------------------------------------------------- */
+/* 01  RESET & ROOT                                    */
+/* -------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --side-pad: 4vw; /* فراغ جانبي افتراضي (يُحدّث بالـMQ) */
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/font/Rubik-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  padding-inline: var(--side-pad); /* حشوة جانبية لكل المحتوى */
+  background-color: #fffff0;
+}
+
+/* -------------------------------------------------- */
+/* 02  UTILITIES & HELPERS                            */
+/* -------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin-inline: auto;
+  padding-inline: 3.2rem;
+}
+
+.mrgn-btm {
+  margin-bottom: 6.4rem;
+}
+.mrgn-btm2 {
+  margin-bottom: 4.8rem;
+}
+
+/* Grid بثلاثة أعمدة يتكيّف أوتوماتيكياً */
+.grid-3-cl {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+}
+
+/* -------------------------------------------------- */
+/* 03  HERO SECTION                                   */
+/* -------------------------------------------------- */
+.section-hero {
+  padding: 4.8rem 0 9.6rem;
+  background-color: #fffff0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 4.8rem;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  padding: 0 3.2rem;
+  align-items: center;
+}
+
+.section-hero img {
+  width: 100%;
+}
+
+.header {
+  margin: 0 auto 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 20rem;
+}
+
+.hero img {
+  max-width: 90%;
+  display: block;
+}
+
+.img-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.Zyarah-title {
+  font-size: 4.8rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.6;
+  color: #1a2c11;
+}
+
+.zyarah-desc {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.btn-cta {
+  background-color: #1a2c11;
+  padding: 1.6rem 3.2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: rgb(37, 65, 25);
+}
+
+/* -------------------------------------------------- */
+/* 05  PROGRAMS (empp-program)                        */
+/* -------------------------------------------------- */
+.section-program {
+  width: 100%;
+  max-width: 120rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.program {
+  width: 36rem;
+  flex: 1 1 36rem;
+  padding: 1.4rem 1.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.115);
+  border-radius: 15px;
+}
+
+.program-title {
+  text-align: center;
+  font-size: 2.8rem;
+  background-color: #1a2c11;
+  color: #fff;
+  padding: 1.6rem;
+  border-radius: 10px;
+  margin-bottom: 2.4rem;
+}
+
+.sup-title {
+  text-align: right;
+  font-size: 2.8rem;
+  color: #9ba684;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.program-list {
+  list-style: none;
+  text-align: right;
+  margin-bottom: 2.4rem;
+}
+
+.program-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: #000;
+}
+
+.program-item img {
+  max-width: 2.2rem;
+  filter: invert(68%) sepia(18%) saturate(355%) hue-rotate(38deg)
+    brightness(92%) contrast(94%);
+}
+
+/* -------------------------------------------------- */
+/* 06  BANNER                                         */
+/* -------------------------------------------------- */
+.banner {
+  width: 100%;
+  max-width: 120rem;
+  height: 23rem;
+  margin: 0 auto 8.4rem;
+  border-radius: 20px;
+  background: url("/img/banner two.png") center/cover no-repeat;
+}
+
+/* -------------------------------------------------- */
+/* 07  MAP                                            */
+/* -------------------------------------------------- */
+.location-iframe {
+  display: block;
+  width: 100%;
+  max-width: 120rem;
+  height: 40rem;
+  border-radius: 15px;
+  margin-inline: auto;
+}
+
+/* -------------------------------------------------- */
+/* 08  FOOTER                                         */
+/* -------------------------------------------------- */
+.footer {
+  background-color: #1a2c11;
+  padding: 4.8rem 0 1.6rem;
+  margin-inline: calc(-1 * var(--side-pad));
+  padding-inline: var(--side-pad);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.footer-icon {
+  max-width: 3.2rem;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%)
+    hue-rotate(131deg) brightness(102%) contrast(101%);
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.address-txt {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.copy-right {
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* 09  RESPONSIVE MEDIA QUERIES                       */
+/* -------------------------------------------------- */
+
+@media (max-width: 1300px) {
+
+  .Zyarah-title {
+    font-size: 4rem !important;
+  }
+}
+
+/* === ≤1024px === */
+@media (max-width: 1024px) {
+  html {
+    font-size: 56.25%;
+  }
+  :root {
+    --side-pad: 5vw;
+  }
+  .section-program {
+    gap: 2.4rem;
+  }
+  .header {
+    margin-bottom: 4.8rem;
+  }
+  .img-container img {
+    max-width: 100%;
+  }
+   .Zyarah-title {
+    font-size: 3.6rem !important;
+  }
+}
+
+/* === ≤768px === */
+@media (max-width: 768px) {
+  html {
+    font-size: 53%;
+  }
+  :root {
+    --side-pad: 6vw;
+  }
+
+  .section-program {
+    display: block;
+  }
+
+  .program {
+    width: 100%;
+    max-width: 36rem;
+    margin: 0 auto 3.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+    padding: 0 1.6rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero-txt {
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .Zyarah-title {
+    font-size: 4rem !important;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 3.6rem;
+  }
+
+  .zyarah-desc {
+    font-size: 1.8rem;
+    max-width: 80%;
+    margin:0 auto;
+    margin-bottom: 4.8rem !important;
+
+  }
+}
+
+@media (max-width:480px)
+{
+   html {
+    font-size: 50%;
+  }
+  :root {
+    --side-pad: 5vw;
+  }
+
+  .section-hero {
+    padding: 3.2rem 0 6.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+   .hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero img {
+    max-width: 75%;
+  }
+
+  .logo {
+    max-width: 16rem;
+  }
+
+  .Zyarah-title {
+    font-size: 3.2rem !important;
+    margin-bottom: 2.4rem;
+    line-height: 1.5;
+    padding: 0 3.6rem;
+    max-width: 100%;
+  }
+
+  .zyarah-desc {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    padding: 0 3rem;
+    max-width: 100%;
+  }
+
+}
+
+/* === ≤480px === */
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  :root {
+    --side-pad: 5vw;
+  }
+
+  .section-hero {
+    padding: 3.2rem 0 6.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero img {
+    max-width: 75%;
+  }
+
+  .logo {
+    max-width: 16rem;
+  }
+
+  .Zyarah-title {
+    font-size: 2.6rem !important;
+    margin-bottom: 2.4rem;
+    line-height: 1.5;
+    padding: 0 3.6rem;
+    max-width: 100%;
+  }
+
+  .zyarah-desc {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    padding: 0 3rem;
+    max-width: 100%;
+  }
+
+  .btn-cta {
+    padding: 1.8rem 2.6rem;
+    font-size: 2.2rem;
+  }
+
+  .hero-banner {
+    height: 16rem;
+    border-radius: 10px;
+  }
+
+  .about-txt {
+    font-size: 1.4rem;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+    padding: 1.6rem;
+  }
+
+  .program {
+    width: 100%;
+    max-width: none;
+  }
+
+  .program-title {
+    font-size: 2.1rem;
+    padding: 2.2rem;
+  }
+
+  .sup-title {
+    font-size: 1.9rem;
+  }
+
+  .program-item {
+    font-size: 1.6rem;
+  }
+
+  .banner {
+    height: 12rem;
+    border-radius: 6px;
+  }
+
+  .location-iframe {
+    height: 24rem;
+  }
+
+  .logo-txt {
+    font-size: 2.8rem;
+  }
+
+  .address-txt {
+    font-size: 1.6rem;
+  }
+}
+
+/* === ≤360px === */
+@media (max-width: 360px) {
+  html {
+    font-size: 46%;
+  }
+  :root {
+    --side-pad: 6vw;
+  }
+
+  .about-txt {
+    font-size: 1.8rem;
+  }
+
+  .program-title {
+    font-size: 2.2rem;
+  }
+
+  .sup-title {
+    font-size: 2.2rem;
+  }
+
+  .program-item {
+    font-size: 1.4rem;
+  }
+
+  .hero img {
+    max-width: 75%;
+  }
+
+  .Zyarah-title {
+    font-size: 2.6rem;
+  }
+}
